@@ -1,4 +1,4 @@
-# ⛄️ Walking in a Winter Wonder Website ⛄️
+<h1 align="center"> ⛄️ Walking in a Winter Wonder Website ⛄️ </h1>
 Happy Holidays! This is a project inspired by the holiday season and all its wonderful music.
 
 
@@ -13,7 +13,7 @@ Happy Holidays! This is a project inspired by the holiday season and all its won
 ### Built With
 HTML, CSS, JavaScript, jQuery, Bootstrap
 
-## Enjoy!
+<h2 align="center"> Enjoy! </h2>
 
 <p align="center">
   <img src="media/snow.gif" alt="Snow">
