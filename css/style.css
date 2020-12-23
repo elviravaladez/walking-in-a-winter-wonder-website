@@ -5,101 +5,47 @@
 }
 
 body {
-    background: #bedbbb;
+    background: #F5F1E9;
 }
 
-/*Preloading content*/
-.preload {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 100vh;
-    background: lightskyblue;
+/*Centering loading message*/
+#loading-container {
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: opacity 0.5s ease;
 }
 
-/*Initial display none for main so that the preloading page will display*/
+/*Styling loading message font color*/
+#loading-msg {
+    color: #FF6860;
+}
+
+
+/*Animating snowflakes*/
+.fa-snowflake {
+    animation: fall 10s linear forwards;
+    position: absolute;
+    top: -20px;
+    color: #327D85;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(105vh);
+    }
+}
+
+/*Setting main section of html to display none, that way it does not show up on the loading page*/
 #main-section {
     display: none;
 }
-
-/*Icon size*/
-i {
-    font-size: 3em;
-}
-
-/*Santa's Sleigh styling*/
-.sleigh-icon {
-    height: 20%;
-    width: 50%;
-    animation: sleigh-icon 1s ease infinite alternate;
-}
-
-/*Pre-setting styling in order to animate the clouds*/
-.cloud-1, .cloud-2, .cloud-3 {
-    height: 100px;
-    position: absolute;
-    right: 0;
-}
-
-/*Adding animations and positions to cloud-1*/
-.cloud-1 {
-    top: 25%;
-    transform: translate(100%, -25%);
-    animation: winter-icons 3s ease infinite;
-}
-
-/*Adding animations and positions to cloud-2*/
-.cloud-2 {
-    top: 50%;
-    transform: translate(100%, -50%);
-    animation: winter-icons 3s ease infinite 2s;
-}
-
-/*Adding animations and positions to cloud-3*/
-.cloud-3 {
-    top: 75%;
-    transform: translate(100%, -75%);
-    animation: winter-icons 3s ease infinite 1.5s;
-}
-
-/*Adding animations and positions to h3 within the preload class*/
-.preload h3 {
-    position: absolute;
-    top: 75%;
-    transform: translateY(-75%);
-    font-size: 30px;
-}
-
-/*Styling to animate Santa's Sleigh */
-@keyframes sleigh-icon {
-    from {
-        transform: translateY(0px);
-    }
-    to {
-        transform: translateY(50px);
-    }
-}
-
-/*Styling to animate the winter icons */
-@keyframes winter-icons {
-    from {
-        right: 0;
-    }
-    to {
-        right: 130%;
-    }
-}
-
 
 /*Jumbo Tron*/
 #main-jumbotron {
     background-image: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.4) 100%), url("../img/wreath.jpg");
     background-size: cover;
     background-position: center;
-    height: 45vh;
+    height: 30vh;
     color: white;
 }

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
     <!--Font Awesome -->
@@ -16,17 +16,17 @@
     <title>Winter Wonder Website</title>
 </head>
 <body>
-
-    <div class="preload">
-        <img class="sleigh-icon" src="img/santa-sleigh.png" alt="Santa's Sleigh">
-        <h3>La, la, la, la, landing on our website...</h3>
-        <h1><i class="fas fa-cloud cloud-1 text-white"></i></h1>
-        <h1><i class="fas fa-cloud cloud-2 text-white"></i></h1>
-        <h1><i class="fas fa-cloud cloud-3 text-white"></i></h1>
+    <!-- Preloading Page Content -->
+    <div id="loading-container">
+        <i class="far fa-snowflake"></i>
+        <h1 id="loading-msg">Fa la, la, la, loading...</h1>
     </div>
 
+
+    <!-- Main Section -->
     <main id="main-section">
         <header>
+
             <!-- Jumbo Tron -->
             <div id="main-jumbotron" class="jumbotron jumbotron-fluid text-center">
                 <div class="container">
@@ -67,13 +67,13 @@
                         <p class="card-text">by John Legend</p>
                     </div>
                 </div>
+                <!-- New Song Cards to Display Here -->
             </div>
         </div>
 
-        <!-- New Song Cards to Display Here -->
 
         <!-- Add Song Button to Trigger Add Song Modal -->
-        <div class="d-flex justify-content-center mt-5">
+        <div class="d-flex justify-content-center m-5">
             <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#songModal">
                 Add Song
             </button>
@@ -117,13 +117,12 @@
 
 
 
-    <!-- Custom JS -->
-    <script src="js/main.js"></script>
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-
     <!-- Popper.js, then Bootstrap JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
 </body>
 </html>
