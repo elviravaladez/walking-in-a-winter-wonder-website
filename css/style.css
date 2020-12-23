@@ -1,12 +1,52 @@
+:root {
+    --body-background-color: #F5F1E9;
+    --footer-color: #327D85;
+    --footer-font-family: 'Montserrat', sans-serif;
+
+    --loading-msg-color: #FF6860;
+    --loading-msg-font-family: 'Montserrat', sans-serif;
+    --snowflake-color: #327D85;
+
+    --jumbotron-background-color: #FF6860;
+    --jumbotron-heading-font-family: 'Abril Fatface', cursive;
+    --jumbotron-paragraph-font-family: 'Poppins', sans-serif;
+    --jumbotron-paragraph-font-size: 1.5em;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    background: #F5F1E9;
+/*Set to allow footer stick to bottom without overlap over other elements */
+html {
+    height: 100%;
 }
+
+body {
+    background: var(--body-background-color);
+    /*Set to allow footer stick to bottom without overlap over other elements */
+    min-height: 100%;
+    position: relative;
+    padding-bottom: 8rem;
+}
+
+
+#footer {
+    display: none;
+    background: var(--footer-color);
+    font-family: var(--footer-font-family);
+    color: white;
+    text-align: center;
+
+    /*Making footer stick to bottom without overlap over other elements */
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: 8rem;
+
+}
+
 
 /*Centering loading message*/
 #loading-container {
@@ -18,7 +58,8 @@ body {
 
 /*Styling loading message font color*/
 #loading-msg {
-    color: #FF6860;
+    color: var(--loading-msg-color);
+    font-family: var(--loading-msg-font-family);
 }
 
 
@@ -27,7 +68,7 @@ body {
     animation: fall 10s linear forwards;
     position: absolute;
     top: -20px;
-    color: #327D85;
+    color: var(--snowflake-color);
 }
 
 @keyframes fall {
@@ -41,11 +82,17 @@ body {
     display: none;
 }
 
-/*Jumbo Tron*/
+/*Jumbo tron styling*/
 #main-jumbotron {
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.4) 100%), url("../img/wreath.jpg");
-    background-size: cover;
-    background-position: center;
-    height: 30vh;
+    background: var(--jumbotron-background-color);
     color: white;
+}
+
+#jumbotron-heading {
+    font-family: var(--jumbotron-heading-font-family);
+}
+
+#jumbotron-paragraph {
+    font-family: var(--jumbotron-paragraph-font-family);
+    font-size: var(--jumbotron-paragraph-font-size);
 }

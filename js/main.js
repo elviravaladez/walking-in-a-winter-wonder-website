@@ -8,12 +8,13 @@ const timeoutId = setTimeout(() => {
     $('.fa-snowflake').css('display', 'none');
     $('#loading-container').css('display', 'none');
     $('#main-section').css('display','block');
+    $('#footer').css('display','block');
     stopSnowFlakes();
 }, delay);
 
 
 //setInterval to create snowflakes every 100 milliseconds
-const snowFlakeInterval = setInterval(createSnowFlake, 100);
+const snowFlakeInterval = setInterval(createSnowFlake, 50);
 
 //Creating Snowflakes
 function createSnowFlake() {

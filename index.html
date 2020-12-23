@@ -9,6 +9,10 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
     <!--Font Awesome -->
@@ -16,101 +20,109 @@
     <title>Winter Wonder Website</title>
 </head>
 <body>
-    <!-- Preloading Page Content -->
-    <div id="loading-container">
-        <i class="far fa-snowflake"></i>
-        <h1 id="loading-msg">Fa la, la, la, loading...</h1>
+    <div id="page-container">
+        <div id="content-wrap">
+            <!-- Preloading Page Content -->
+            <div id="loading-container">
+                <i class="far fa-snowflake"></i>
+                <h1 id="loading-msg">Fa la, la, la, loading...</h1>
+            </div>
+
+
+            <!-- Main Section -->
+            <main id="main-section">
+                <header>
+
+                    <!-- Jumbo Tron -->
+                    <div id="main-jumbotron" class="jumbotron jumbotron-fluid text-center">
+                        <div class="container">
+                            <h1 id="jumbotron-heading" class="display-4">Happy Holidays!</h1>
+                            <p id="jumbotron-paragraph" class="lead">On this website you will find a list of popular holiday songs. Click on the "Add Song" button to add a new song to the collection. </p>
+                        </div>
+                    </div>
+                </header>
+
+                <!-- Add Song Button to Trigger Add Song Modal -->
+                <div class="d-flex justify-content-center m-5">
+                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#songModal">
+                        Add Song
+                    </button>
+                </div>
+
+                <!-- Add Song Modal -->
+                <div class="modal fade" id="songModal" tabindex="-1" role="dialog" aria-labelledby="modalLongTitle" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalLongTitle">Add Song</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label for="new-song-title">Title</label>
+                                    <input type="text" class="form-control" id="new-song-title">
+                                </div>
+                                <div class="form-group">
+                                    <label for="new-song-artist">Artist</label>
+                                    <input type="text" class="form-control" id="new-song-artist">
+                                </div>
+                                <div class="form-group">
+                                    <label for="new-song-url">URL</label>
+                                    <input type="text" class="form-control" id="new-song-url" placeholder="https://youtube.com/...">
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-success">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Song Cards -->
+                <div class="d-flex justify-content-center">
+                    <div class="card-deck">
+                        <div class="card">
+                            <iframe class="card-img-top" width="300" height="200" src="https://www.youtube.com/embed/yXQViqx6GMY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <div class="card-body">
+                                <h5 class="card-title">All I Want For Christmas Is You</h5>
+                                <p class="card-text">by Mariah Carey</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <iframe class="card-img-top" width="300" height="200" src="https://www.youtube.com/embed/E8gmARGvPlI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <div class="card-body">
+                                <h5 class="card-title">Last Christmas</h5>
+                                <p class="card-text">by Wham!</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <iframe class="card-img-top" width="300" height="200" src="https://www.youtube.com/embed/d_Bb8wRx_T4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <div class="card-body">
+                                <h5 class="card-title">Like It's Christmas</h5>
+                                <p class="card-text">by The Jonas Brothers</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <iframe class="card-img-top" width="300" height="200" src="https://www.youtube.com/embed/EqHzjDBXSFI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <div class="card-body">
+                                <h5 class="card-title">What Christmas Means to Me</h5>
+                                <p class="card-text">by John Legend</p>
+                            </div>
+                        </div>
+                        <!-- New Song Cards to Display Here -->
+                    </div>
+                </div>
+
+            </main>
+        </div>
+        <footer id="footer">
+            <p>A PROJECT BY <br>ELVIRA VALADEZ</p>
+            <p>Copyright &copy; <script>document.write(new Date().getFullYear());</script></p>
+        </footer>
     </div>
-
-
-    <!-- Main Section -->
-    <main id="main-section">
-        <header>
-
-            <!-- Jumbo Tron -->
-            <div id="main-jumbotron" class="jumbotron jumbotron-fluid text-center">
-                <div class="container">
-                    <h1 class="display-4">Happy Holidays!</h1>
-                    <p class="lead">On this website you will find a list of popular holiday songs. </p>
-                </div>
-            </div>
-        </header>
-
-        <!-- Song Cards -->
-        <div class="d-flex justify-content-center">
-            <div class="card-deck">
-                <div class="card">
-                    <iframe class="card-img-top" width="300" height="200" src="https://www.youtube.com/embed/yXQViqx6GMY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <div class="card-body">
-                        <h5 class="card-title">All I Want For Christmas Is You</h5>
-                        <p class="card-text">by Mariah Carey</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <iframe class="card-img-top" width="300" height="200" src="https://www.youtube.com/embed/E8gmARGvPlI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <div class="card-body">
-                        <h5 class="card-title">Last Christmas</h5>
-                        <p class="card-text">by Wham!</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <iframe class="card-img-top" width="300" height="200" src="https://www.youtube.com/embed/d_Bb8wRx_T4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <div class="card-body">
-                        <h5 class="card-title">Like It's Christmas</h5>
-                        <p class="card-text">by The Jonas Brothers</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <iframe class="card-img-top" width="300" height="200" src="https://www.youtube.com/embed/EqHzjDBXSFI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <div class="card-body">
-                        <h5 class="card-title">What Christmas Means to Me</h5>
-                        <p class="card-text">by John Legend</p>
-                    </div>
-                </div>
-                <!-- New Song Cards to Display Here -->
-            </div>
-        </div>
-
-
-        <!-- Add Song Button to Trigger Add Song Modal -->
-        <div class="d-flex justify-content-center m-5">
-            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#songModal">
-                Add Song
-            </button>
-        </div>
-
-        <!-- Add Song Modal -->
-        <div class="modal fade" id="songModal" tabindex="-1" role="dialog" aria-labelledby="modalLongTitle" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="modalLongTitle">Add Song</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="form-group">
-                            <label for="new-song-title">Title</label>
-                            <input type="text" class="form-control" id="new-song-title">
-                        </div>
-                        <div class="form-group">
-                            <label for="new-song-artist">Artist</label>
-                            <input type="text" class="form-control" id="new-song-artist">
-                        </div>
-                        <div class="form-group">
-                            <label for="new-song-url">URL</label>
-                            <input type="text" class="form-control" id="new-song-url" placeholder="https://youtube.com/...">
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-success">Save changes</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
 
 
 
