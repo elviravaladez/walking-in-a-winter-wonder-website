@@ -10,7 +10,11 @@
     --jumbotron-background-color: #FF6860;
     --jumbotron-heading-font-family: 'Abril Fatface', cursive;
     --jumbotron-paragraph-font-family: 'Poppins', sans-serif;
-    --jumbotron-paragraph-font-size: 1.5em;
+    --jumbotron-paragraph-font-size: 1em;
+
+    /*Styling for add song button*/
+    --button-color: #addbad;
+    --hover-button-color: #8ede8e;
 }
 
 * {
@@ -57,6 +61,7 @@ body {
 /*Styling loading message font color*/
 #loading-msg {
     color: var(--loading-msg-color);
+    text-align: center;
     font-family: var(--loading-msg-font-family);
 }
 
@@ -83,13 +88,56 @@ body {
 #main-jumbotron {
     background: var(--jumbotron-background-color);
     color: white;
+    margin: 0 1em; /*for margin all around the jumbo tron*/
 }
 
 #jumbotron-heading {
     font-family: var(--jumbotron-heading-font-family);
+    font-size: 3em;
 }
 
 #jumbotron-paragraph {
     font-family: var(--jumbotron-paragraph-font-family);
     font-size: var(--jumbotron-paragraph-font-size);
+    color: black;
+    font-weight: bolder;
+}
+
+.the-card-container {
+    margin: 1em;
+}
+
+/*changing color of links*/
+a:link {
+    color: #FF6860;
+}
+
+a:visited {
+    color: black;
+}
+
+/* Large devices (desktops, 992px and up) */
+@media screen and (min-width:992px) {
+    /*Jumbo tron styling*/
+    #main-jumbotron {
+        background: var(--jumbotron-background-color);
+        color: white;
+    }
+
+    #jumbotron-heading {
+        font-size: 100px;
+    }
+
+    #jumbotron-paragraph {
+        font-family: var(--jumbotron-paragraph-font-family);
+        font-size: 25px;
+    }
+
+    #add-button-1 {
+        display: block;
+    }
+
+    #add-button-2, #back-to-top {
+        display: none;
+    }
 }
