@@ -1,9 +1,9 @@
 "use strict";
 
 // 3 second SetTimeout for the preloading page
-let delay = 3000;
+const delay = 3000;
 
-let timeoutId = setTimeout(() => {
+const timeoutId = setTimeout(() => {
     $('#loading-msg').css('display', 'none');
     $('.fa-snowflake').css('display', 'none');
     $('#loading-container').css('display', 'none');
@@ -13,7 +13,7 @@ let timeoutId = setTimeout(() => {
 
 
 //setInterval to create snowflakes every 100 milliseconds
-let snowFlakeInterval = setInterval(createSnowFlake, 100);
+const snowFlakeInterval = setInterval(createSnowFlake, 100);
 
 //Creating Snowflakes
 function createSnowFlake() {
