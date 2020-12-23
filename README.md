@@ -14,5 +14,5 @@ Happy Holidays! This is a project inspired by the holiday season and all its won
 HTML, CSS, JavaScript, jQuery, Bootstrap
 
 <p align="center">
-  <img src="media/snow.gif" alt="Snow">
+  <img src="img/snow.gif" alt="Snow">
 </p>

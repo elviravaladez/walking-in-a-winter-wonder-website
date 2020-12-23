@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!--Font Awesome -->
+    <script src="https://kit.fontawesome.com/5eae995560.js" crossorigin="anonymous"></script>
+    <title>Winter Wonder Website</title>
+</head>
+<body>
+
+    <div class="preload">
+        <img class="sleigh-icon" src="img/santa-sleigh.png" alt="Santa's Sleigh">
+        <h3>La, la, la, la, landing on our website...</h3>
+        <h1><i class="fas fa-cloud cloud-1 text-white"></i></h1>
+        <h1><i class="fas fa-cloud cloud-2 text-white"></i></h1>
+        <h1><i class="fas fa-cloud cloud-3 text-white"></i></h1>
+    </div>
+
+    <main id="main-section">
+        <header>
+            <!-- Jumbo Tron -->
+            <div id="main-jumbotron" class="jumbotron jumbotron-fluid text-center">
+                <div class="container">
+                    <h1 class="display-4">Happy Holidays!</h1>
+                    <p class="lead">On this website you will find a list of popular holiday songs. </p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Song Cards -->
+        <div class="d-flex justify-content-center">
+            <div class="card-deck">
+                <div class="card">
+                    <iframe class="card-img-top" width="300" height="200" src="https://www.youtube.com/embed/yXQViqx6GMY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="card-body">
+                        <h5 class="card-title">All I Want For Christmas Is You</h5>
+                        <p class="card-text">by Mariah Carey</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <iframe class="card-img-top" width="300" height="200" src="https://www.youtube.com/embed/E8gmARGvPlI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="card-body">
+                        <h5 class="card-title">Last Christmas</h5>
+                        <p class="card-text">by Wham!</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <iframe class="card-img-top" width="300" height="200" src="https://www.youtube.com/embed/d_Bb8wRx_T4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="card-body">
+                        <h5 class="card-title">Like It's Christmas</h5>
+                        <p class="card-text">by The Jonas Brothers</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <iframe class="card-img-top" width="300" height="200" src="https://www.youtube.com/embed/EqHzjDBXSFI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="card-body">
+                        <h5 class="card-title">What Christmas Means to Me</h5>
+                        <p class="card-text">by John Legend</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- New Song Cards to Display Here -->
+
+        <!-- Add Song Button to Trigger Add Song Modal -->
+        <div class="d-flex justify-content-center mt-5">
+            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#songModal">
+                Add Song
+            </button>
+        </div>
+
+        <!-- Add Song Modal -->
+        <div class="modal fade" id="songModal" tabindex="-1" role="dialog" aria-labelledby="modalLongTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalLongTitle">Add Song</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="new-song-title">Title</label>
+                            <input type="text" class="form-control" id="new-song-title">
+                        </div>
+                        <div class="form-group">
+                            <label for="new-song-artist">Artist</label>
+                            <input type="text" class="form-control" id="new-song-artist">
+                        </div>
+                        <div class="form-group">
+                            <label for="new-song-url">URL</label>
+                            <input type="text" class="form-control" id="new-song-url" placeholder="https://youtube.com/...">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-success">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+
+
+
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <!-- Popper.js, then Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
