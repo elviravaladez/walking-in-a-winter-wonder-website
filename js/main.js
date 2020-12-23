@@ -36,3 +36,9 @@ function createSnowFlake() {
 function stopSnowFlakes() {
     clearInterval(snowFlakeInterval);
 }
+
+
+//setTimeout for modal
+setTimeout(function () {
+    $('#songModal').modal('toggle');
+}, 5000);
