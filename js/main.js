@@ -45,9 +45,9 @@ const addNewSong = $('#save-btn').click(function () {
 
     let newSongMedia = "";
     if($("#new-song-url").length && $("#new-song-url").val().length){
-        newSongMedia = `<iframe class="card-img-top" width="300" height="200" src="${songUrl}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+        newSongMedia = `<iframe class="card-img-top" width="200" height="200" src="${songUrl}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
     }   else{
-        newSongMedia = `<img class="card-img-top" width="300" height="200" src="../img/music-placeholder.png" alt="Music Image Placeholder">`;
+        newSongMedia = `<img class="card-img-top" width="100" height="300" src="img/music-placeholder.png" alt="Music Image Placeholder">`;
     }
 
     let newSong = '';
