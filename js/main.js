@@ -37,14 +37,26 @@ function stopSnowFlakes() {
     clearInterval(snowFlakeInterval);
 }
 
+//Capitalizing first letter of each word of a string
+function titleCase(str) {
+    let splitStr = str.toLowerCase().split(' ');
+    for (let i = 0; i < splitStr.length; i++) {
+        splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);
+    }
+    return splitStr.join(' ');
+}
+
 //Getting data from modal and adding new song to card deck
 const addNewSong = $('#save-btn').click(function () {
-    let songTitle = $('#songModal #new-song-title').val();
-    let songArtist = $('#songModal #new-song-artist').val();
+    let songTitle = titleCase($('#songModal #new-song-title').val());
+    let songArtist = titleCase($('#songModal #new-song-artist').val());
     let songUrl = $('#songModal #new-song-url').val();
     let songUrlEqualSign = songUrl.search('=');
     let songUrlID = songUrl.slice(songUrlEqualSign);
 
+    //Checking to see if user left url blank.
+    // If they did not, the YouTube video will be displayed within the new music card
+    // If they did leave the url area blank, a default music placeholder image will be displayed within the new song card
     let newSongMedia = "";
     if($("#new-song-url").length && $("#new-song-url").val().length){
         newSongMedia = `<iframe class="card-img-top" width="200" height="200" src="https://www.youtube.com/embed/${songUrlID}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
@@ -52,6 +64,7 @@ const addNewSong = $('#save-btn').click(function () {
         newSongMedia = `<img class="card-img-top" width="100" height="300" src="img/music-placeholder.png" alt="Music Image Placeholder">`;
     }
 
+    //Building out the new song card, then appending it to the page to display
     let newSong = '';
     newSong +=
         `<div class="card text-center">
