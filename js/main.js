@@ -42,10 +42,12 @@ const addNewSong = $('#save-btn').click(function () {
     let songTitle = $('#songModal #new-song-title').val();
     let songArtist = $('#songModal #new-song-artist').val();
     let songUrl = $('#songModal #new-song-url').val();
+    let songUrlEqualSign = songUrl.search('=');
+    let songUrlID = songUrl.slice(songUrlEqualSign);
 
     let newSongMedia = "";
     if($("#new-song-url").length && $("#new-song-url").val().length){
-        newSongMedia = `<iframe class="card-img-top" width="200" height="200" src="${songUrl}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+        newSongMedia = `<iframe class="card-img-top" width="200" height="200" src="https://www.youtube.com/embed/${songUrlID}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
     }   else{
         newSongMedia = `<img class="card-img-top" width="100" height="300" src="img/music-placeholder.png" alt="Music Image Placeholder">`;
     }
