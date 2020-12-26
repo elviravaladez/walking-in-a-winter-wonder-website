@@ -12,7 +12,7 @@ const timeoutId = setTimeout(() => {
     stopSnowFlakes();
 }, delay);
 
-//setInterval to create snowflakes every 100 milliseconds
+//setInterval to create snowflakes every 50 milliseconds
 const snowFlakeInterval = setInterval(createSnowFlake, 50);
 
 //Creating snowflakes
